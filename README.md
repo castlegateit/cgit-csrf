@@ -1,4 +1,4 @@
 cgit-csrf
 =========
 
-A simple cross site request forgery (CSRF) lass
+A simple cross site request forgery (CSRF) class
