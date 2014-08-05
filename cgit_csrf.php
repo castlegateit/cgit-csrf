@@ -153,14 +153,17 @@ class cgit_crsf
      */
     private function generate_new_token()
     {
-       for ($i = -1; $i <= ($this->token_length * 4); $i++) {
+       for ($i = -1; $i <= ($this->token_length * 4); $i++)
+       {
             $bytes = openssl_random_pseudo_bytes($i);
             $hex   = bin2hex($bytes);
+
             if (strlen($hex) == $this->token_length)
             {
                 break;
             }
         }
+
         $_SESSION[$this->session_key] = $hex;
     }
 
